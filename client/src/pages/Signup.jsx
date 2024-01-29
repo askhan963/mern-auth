@@ -38,7 +38,7 @@ const Signup = () => {
     }
     try {
       const { data } = await axios.post(
-        "https://mern-auth-4wasj7kth-askhan963.vercel.app/signup",
+        "https://mern-auth-pink-mu.vercel.app/signup",
         {
           ...inputValue,
         },

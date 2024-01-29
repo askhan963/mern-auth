@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://mern-auth-nu.vercel.app/login",
+        "https://mern-auth-pink-mu.vercel.app/login",
         {
           ...inputValue,
         },

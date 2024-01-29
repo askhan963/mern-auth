@@ -19,7 +19,7 @@ const Home = () => {
       } else {
         try {
           const { data } = await axios.post(
-            "https://mern-auth-nu.vercel.app/",
+            "https://mern-auth-pink-mu.vercel.app/",
             {},
             {
               withCredentials: true,
