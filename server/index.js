@@ -6,7 +6,7 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
 const { MONGO_URL, PORT } = process.env;
-const helmet = require('helmet');
+
 
 // console.log('MONGO_URL:', process.env.MONGO_URL);
 mongoose
@@ -20,16 +20,9 @@ mongoose
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
-// Set the environment to production
-app.set('env', 'production');
+
 app.use(helmet());
-app.use(
-  cors({
-    origin: ["http://localhost:3000"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(cookieParser());
 
 app.use(express.json());
